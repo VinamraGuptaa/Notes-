@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.notes20.MainActivity">
+
+    <item
+        android:id="@+id/Dev_info"
+        android:title="@string/about_developer">
+
+    </item>
+</menu>

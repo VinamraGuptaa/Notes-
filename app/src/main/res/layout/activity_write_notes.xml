@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteNotes"
+    android:orientation="vertical"
+    android:background="#121212">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_writenotes"
+        android:layout_width="match_parent"
+        app:titleTextColor="#FFFFFF"
+        android:fitsSystemWindows="true"
+        app:popupTheme="@style/AppTheme.NoActionBar"
+        android:layout_height="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_title"
+            android:layout_width="match_parent"
+            app:boxStrokeColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_writenotes"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:counterMaxLength="15"
+            app:hintTextColor="#FFFFFF"
+            android:fitsSystemWindows="true"
+             android:textColorHint="#FFFFFF"
+            app:counterOverflowTextColor="@android:color/holo_red_dark"
+            app:counterTextColor="@android:color/darker_gray"
+            app:counterEnabled="true"
+            app:boxCornerRadiusTopStart="20dp"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:fitsSystemWindows="true"
+                android:textColorHint="@android:color/holo_red_dark"
+                android:textStyle="bold"
+                android:inputType="text|textCapSentences|textShortMessage">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/til_title"
+            android:layout_marginTop="10dp"
+            android:background="#8C92AC"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@id/line"
+            android:textColor="#FFFFFF"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_date"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_body"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:layout_below="@id/tv_date"
+            android:hint="@string/decription"
+            app:counterEnabled="true"
+            android:textColorHint="#FFFFFF"
+            app:counterMaxLength="500"
+            app:boxStrokeColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="#FFFFFF"
+            android:layout_alignBaseline="@id/toolbar_writenotes"
+            android:fitsSystemWindows="true"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:counterTextColor="@android:color/darker_gray"
+            app:boxCornerRadiusTopEnd="20dp"
+            android:layout_centerInParent="true"
+            app:boxCornerRadiusTopStart="20dp"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:fitsSystemWindows="true"
+                android:textColorHint="@android:color/holo_red_dark"
+                android:gravity="top|start"
+                android:textStyle="bold"
+                android:inputType="textMultiLine|textCapSentences">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+
+            android:contentDescription="@string/saveimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_Save"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/til_body"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="center"
+            android:src="@drawable/edit_btn">
+
+        </ImageView>
+
+
+
+
+</RelativeLayout>

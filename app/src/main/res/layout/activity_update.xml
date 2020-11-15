@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:layout_height="match_parent"
+    tools:context=".updateActivity">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_UpdateNotes"
+        android:layout_width="match_parent"
+        app:titleTextColor="#FFFFFF"
+        app:popupTheme="@style/AppTheme.NoActionBar"
+        android:layout_height="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_title"
+        android:layout_width="match_parent"
+        app:boxStrokeColor="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_UpdateNotes"
+        app:hintTextColor="#FFFFFF"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:counterOverflowTextColor="@android:color/holo_red_dark"
+        app:errorEnabled="true"
+        android:fitsSystemWindows="true"
+        app:counterMaxLength="15"
+        app:counterEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/update_et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColorHint="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:inputType="text|textCapSentences|textShortMessage">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <View
+        android:id="@+id/Update_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/til_title"
+        android:background="#8C92AC"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/Update_line"
+        android:layout_centerInParent="true"
+        android:id="@+id/update_tv_date"
+
+        android:textSize="18sp">
+
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/update_til_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update_tv_date"
+        android:elevation="5dp"
+        android:hint="@string/decription"
+        app:counterEnabled="true"
+        app:boxStrokeColor="#FFFF"
+        app:counterMaxLength="500"
+        app:hintTextColor="#FFFF"
+        android:layout_alignBaseline="@id/toolbar_UpdateNotes"
+        android:fitsSystemWindows="true"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/update_et_Body"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:textSize="18sp"
+            android:textColor="#FFFF"
+            android:gravity="top|start"
+            android:textStyle="bold"
+            android:textColorHint="@android:color/holo_red_dark"
+            android:inputType="textMultiLine|textCapSentences">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+
+        android:contentDescription="@string/updateimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/img_Update"
+        android:layout_below="@id/update_til_body"
+        android:layout_centerInParent="true"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="center"
+        android:src="@drawable/update_btn">
+
+    </ImageView>
+
+
+</RelativeLayout>
